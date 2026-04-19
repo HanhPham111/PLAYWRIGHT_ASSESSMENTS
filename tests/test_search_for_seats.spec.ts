@@ -70,5 +70,21 @@ test(`Verify can search for an unavailable seat successfully with ${departing_op
   await expect(results_page.locators.search_results_content).toContainText('Sorry, there are no more seats available.');
 }); 
 }
+});
 
+test.describe("Verify the search for invalid returns",()=>{
+
+const inavlid_return = [
+    { departing_opt: search_options.july_next_year, returning_opt: search_options.december_next_year }
+  ];
+
+for (const { departing_opt, returning_opt } of inavlid_return) {
+test(`Verify message when search for inavlid return`, async ({ page, init_test }) => {
+  const search_page = new homepage(page);
+  await search_page.input_searching_fields({departing_opt: departing_opt, returning_opt: returning_opt});
+  await search_page.click_search_button();
+  const results_page = new search_results_page(page);
+  await expect(results_page.locators.search_results_content).toContainText('Unfortunately, this schedule is not possible. Please try again.');
+}); 
+}
 });
