@@ -1,0 +1,25 @@
+>>>>>>>>> A few lines about my approach to testing the application. <<<<<<<<<<
+
+First, I perform a quick walkthrough of the UI to get familiar with the application.
+Next, I carefully read and analyze the user stories to fully understand the requirements before creating a test plan.
+Then, I design the test plan and write detailed test cases.
+After that, I execute the test cases on my local machine and report any bugs found during testing.
+Finally, I update the test reports and identify which test cases should be automated.
+
+For automation, I prioritize test cases based on their importance, such as:
++ Main user flows
++ Critical scenarios
++ Complex or high-risk logic
+
+Criteria for writing the automated tests:
++ Focus on high-value scenarios such as critical flows and frequently used features.
++ Ensure the test scripts are stable, independent, and maintainable.
+
+Automation testing tools: 
++ I select playwright because: 
+1. It is developed and maintained by Microsoft
+2. It provides powerful built-in features such as auto-waiting, parallel execution, retries, and trace reports, which improve test reliability and debugging efficiency.
+3. It supports multiple programming languages, making it flexible for different technology stacks.
+4. It has comprehensive and well-structured documentation
+5. Easy to setup
+
